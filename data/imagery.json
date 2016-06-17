@@ -23,7 +23,18 @@
         ]
     },
     {
-        "name": "OpenRoads road network",
+        "name": "Minimal",
+        "type": "tms",
+        "vector": true,
+        "description": "Light basemap with country outlines.",
+        "template": "https://{switch:a,b,c}.tiles.mapbox.com/v4/openroads.fddb9509/{zoom}/{x}/{y}.png?access_token=pk.eyJ1IjoiZGV2c2VlZCIsImEiOiJnUi1mbkVvIn0.018aLhX0Mb0tdtaT2QNe2Q",
+        "scaleExtent": [
+            0,
+            19
+        ]
+    },
+    {
+        "name": "OpenRoads",
         "type": "tms",
         "description": "OpenRoads road network",
         "vector": true,
@@ -36,6 +47,36 @@
         "id": "ornetwork",
         "default": true,
         "overlay": true
+    },
+    {
+        "name": "OpenRoads-Condition",
+        "id": "ornetwork",
+        "overzoom": false,
+        "overlay": true,
+        "type": "tms",
+        "vector": false,
+        "description": "Roads by condition",
+        "scaleExtent": [
+            0,
+            16
+        ],
+        "default": false,
+        "template": "http://50.16.162.86/condition/{zoom}/{x}/{y}.png"
+    },
+    {
+        "name": "OpenRoads-Surface",
+        "id": "ornetwork",
+        "overzoom": false,
+        "overlay": true,
+        "type": "tms",
+        "vector": false,
+        "description": "Roads by surface",
+        "scaleExtent": [
+            0,
+            16
+        ],
+        "default": false,
+        "template": "http://50.16.162.86/surface/{zoom}/{x}/{y}.png"
     },
     {
         "name": "Philippine boundaries",
