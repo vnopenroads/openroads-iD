@@ -1,0 +1,285 @@
+iD.data.imagery = [
+    {
+        "name": "Digital Globe",
+        "type": "tms",
+        "vector": false,
+        "description": "Digital Globe Maps API.",
+        "scaleExtent": [
+            0,
+            22
+        ],
+        "default": true,
+        "template": "https://api.mapbox.com/v4/digitalglobe.nal0g75k/{zoom}/{x}/{y}.png?access_token=pk.eyJ1IjoiZGlnaXRhbGdsb2JlIiwiYSI6ImNpbWdrZjhlZjAwMnd0emtvNXYzYmFwZm4ifQ.5owPkJs5HMvoB8IQPyuwEw"
+    },
+    {
+        "name": "Palawan - Planet Labs",
+        "type": "tms",
+        "vector": false,
+        "description": "Planet Labs mosaic for Palawan",
+        "template": "https://tiles{switch:0,1,2,3}.planet.com/v0/mosaics/ak_palawan_island_planetscope_v8_mosaic/{zoom}/{x}/{y}.png?api_key=6861dfd2e7be4cd7b04cd0a85b77b859",
+        "scaleExtent": [
+            0,
+            19
+        ]
+    },
+    {
+        "name": "Mindanao - Planet Labs",
+        "type": "tms",
+        "vector": false,
+        "description": "Planet Labs mosaic for Mindanao",
+        "template": "https://tiles{switch:0,1,2,3}.planet.com/v0/mosaics/ak_mindanao_planetscope_v4_mosaic/{zoom}/{x}/{y}.png?api_key=6861dfd2e7be4cd7b04cd0a85b77b859",
+        "scaleExtent": [
+            0,
+            19
+        ]
+    },
+    {
+        "name": "Minimal",
+        "type": "tms",
+        "vector": true,
+        "description": "Light basemap with country outlines.",
+        "template": "https://{switch:a,b,c}.tiles.mapbox.com/v4/openroads.fddb9509/{zoom}/{x}/{y}.png?access_token=pk.eyJ1IjoiZGV2c2VlZCIsImEiOiJnUi1mbkVvIn0.018aLhX0Mb0tdtaT2QNe2Q",
+        "scaleExtent": [
+            0,
+            19
+        ]
+    },
+    {
+        "name": "OpenRoads",
+        "type": "tms",
+        "description": "Roads by responsibility",
+        "vector": true,
+        "template": "http://50.16.162.86/{zoom}/{x}/{y}.png",
+        "scaleExtent": [
+            0,
+            16
+        ],
+        "overzoom": false,
+        "id": "ornetwork",
+        "default": true,
+        "overlay": true
+    },
+    {
+        "name": "OpenRoads-Condition",
+        "id": "ornetwork",
+        "overzoom": false,
+        "overlay": true,
+        "type": "tms",
+        "vector": false,
+        "description": "Roads by condition",
+        "scaleExtent": [
+            0,
+            16
+        ],
+        "default": false,
+        "template": "http://50.16.162.86/condition/{zoom}/{x}/{y}.png"
+    },
+    {
+        "name": "OpenRoads-Surface",
+        "id": "ornetwork",
+        "overzoom": false,
+        "overlay": true,
+        "type": "tms",
+        "vector": false,
+        "description": "Roads by surface",
+        "scaleExtent": [
+            0,
+            16
+        ],
+        "default": false,
+        "template": "http://50.16.162.86/surface/{zoom}/{x}/{y}.png"
+    },
+    {
+        "name": "Philippine boundaries",
+        "type": "tms",
+        "vector": true,
+        "description": "Regional, provincial and municipal boundaries for the Philippines",
+        "template": "https://{switch:a,b,c}.tiles.mapbox.com/v4/openroads.91bb102d/{zoom}/{x}/{y}.png?access_token=pk.eyJ1IjoiZGV2c2VlZCIsImEiOiJnUi1mbkVvIn0.018aLhX0Mb0tdtaT2QNe2Q",
+        "scaleExtent": [
+            0,
+            18
+        ],
+        "id": "municipality",
+        "default": true,
+        "overlay": true
+    },
+    {
+        "name": "Grid Overlay",
+        "type": "tms",
+        "vector": true,
+        "description": "Shows a 1km2 or 10km2 grid, depending on zoom level",
+        "template": "http://{switch:a,b,c}.tiles.mapbox.com/v4/openroads.dbae1bc2/{zoom}/{x}/{y}.png?access_token=pk.eyJ1Ijoib3BlbnN0cmVldG1hcCIsImEiOiJncjlmd0t3In0.DmZsIeOW-3x-C5eX-wAqTw",
+        "scaleExtent": [
+            0,
+            20
+        ],
+        "id": "grid",
+        "overzoom": false,
+        "overlay": true
+    },
+    {
+        "name": "TRIP",
+        "id": "trip",
+        "overzoom": false,
+        "overlay": true,
+        "type": "wmts",
+        "vector": false,
+        "description": "TRIP",
+        "scaleExtent": [
+            0,
+            22
+        ],
+        "default": false,
+        "template": "http://openroads.ph:8080/geoserver/gwc/service/wms?LAYERS=routeshootgis:trip_projects&FORMAT=image/png&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:3857&BBOX={bbox}&WIDTH=256&HEIGHT=256"
+    },
+    {
+        "name": "TRIP Subprojects",
+        "id": "trip-subproject",
+        "overzoom": false,
+        "overlay": true,
+        "type": "wmts",
+        "vector": false,
+        "description": "TRIP Subprojects",
+        "scaleExtent": [
+            0,
+            22
+        ],
+        "default": false,
+        "template": "http://openroads.ph:8080/geoserver/gwc/service/wms?LAYERS=routeshootgis:TRIP_Subprojects&FORMAT=image/png&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:3857&BBOX={bbox}&WIDTH=256&HEIGHT=256"
+    },
+    {
+        "name": "GAA FMR",
+        "id": "gaa-fmr-access",
+        "overzoom": false,
+        "overlay": true,
+        "type": "wmts",
+        "vector": false,
+        "description": "GAA FMR",
+        "scaleExtent": [
+            0,
+            22
+        ],
+        "default": false,
+        "template": "http://openroads.ph:8080/geoserver/gwc/service/wms?LAYERS=routeshootgis:GAA_FMR_Regular_Access&FORMAT=image/png&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:3857&BBOX={bbox}&WIDTH=256&HEIGHT=256"
+    },
+    {
+        "name": "GAA FMR Subprojects",
+        "id": "gaa-fmr",
+        "overzoom": false,
+        "overlay": true,
+        "type": "wmts",
+        "vector": false,
+        "description": "GAA FMR Subprojects",
+        "scaleExtent": [
+            0,
+            22
+        ],
+        "default": false,
+        "template": "http://openroads.ph:8080/geoserver/gwc/service/wms?LAYERS=routeshootgis:GAA_FMR_Regular&FORMAT=image/png&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:3857&BBOX={bbox}&WIDTH=256&HEIGHT=256"
+    },
+    {
+        "name": "FMR PRDP",
+        "id": "prdp-access",
+        "overzoom": false,
+        "overlay": true,
+        "type": "wmts",
+        "vector": false,
+        "description": "FMR PRDP",
+        "scaleExtent": [
+            0,
+            22
+        ],
+        "default": false,
+        "template": "http://openroads.ph:8080/geoserver/gwc/service/wms?LAYERS=routeshootgis:PRDP_Access&FORMAT=image/png&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:3857&BBOX={bbox}&WIDTH=256&HEIGHT=256"
+    },
+    {
+        "name": "FMR PRDP Subprojects",
+        "id": "prdp",
+        "overzoom": false,
+        "overlay": true,
+        "type": "wmts",
+        "vector": false,
+        "description": "FMR PRDP Subprojects",
+        "scaleExtent": [
+            0,
+            22
+        ],
+        "default": false,
+        "template": "http://openroads.ph:8080/geoserver/gwc/service/wms?LAYERS=routeshootgis:PRDP&FORMAT=image/png&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:3857&BBOX={bbox}&WIDTH=256&HEIGHT=256"
+    },
+    {
+        "name": "Bottom-up budgeting",
+        "id": "bub",
+        "overzoom": false,
+        "overlay": true,
+        "type": "wmts",
+        "vector": false,
+        "description": "Bottom-Up Budgeting",
+        "scaleExtent": [
+            0,
+            22
+        ],
+        "default": false,
+        "template": "http://openroads.ph:8080/geoserver/gwc/service/wms?LAYERS=routeshootgis:BUB&FORMAT=image/png&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:3857&BBOX={bbox}&WIDTH=256&HEIGHT=256"
+    },
+    {
+        "name": "PRMF",
+        "id": "prmf",
+        "overzoom": false,
+        "overlay": true,
+        "type": "wmts",
+        "vector": false,
+        "description": "PRMF",
+        "scaleExtent": [
+            0,
+            22
+        ],
+        "default": false,
+        "template": "http://openroads.ph:8080/geoserver/gwc/service/wms?LAYERS=routeshootgis:PRMF&FORMAT=image/png&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:3857&BBOX={bbox}&WIDTH=256&HEIGHT=256"
+    },
+    {
+        "name": "Kalsada",
+        "id": "kalsada",
+        "overzoom": false,
+        "overlay": true,
+        "type": "wmts",
+        "vector": false,
+        "description": "Kalsada",
+        "scaleExtent": [
+            0,
+            22
+        ],
+        "default": false,
+        "template": "http://openroads.ph:8080/geoserver/gwc/service/wms?LAYERS=routeshootgis:Kalsada&FORMAT=image/png&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG:3857&BBOX={bbox}&WIDTH=256&HEIGHT=256"
+    },
+    {
+        "name": "Mapbox Satellite",
+        "type": "tms",
+        "vector": false,
+        "description": "Satellite and aerial imagery.",
+        "template": "http://{switch:a,b,c}.tiles.mapbox.com/v4/openstreetmap.map-inh7ifmo/{zoom}/{x}/{y}.png?access_token=pk.eyJ1Ijoib3BlbnN0cmVldG1hcCIsImEiOiJncjlmd0t3In0.DmZsIeOW-3x-C5eX-wAqTw",
+        "scaleExtent": [
+            0,
+            19
+        ],
+        "terms_url": "http://www.mapbox.com/about/maps/",
+        "terms_text": "Terms & Feedback",
+        "id": "Mapbox",
+        "default": true
+    },
+    {
+        "name": "OpenStreetMap (Mapnik)",
+        "type": "tms",
+        "vector": true,
+        "description": "The default OpenStreetMap layer.",
+        "template": "http://{switch:a,b,c}.tile.openstreetmap.org/{zoom}/{x}/{y}.png",
+        "scaleExtent": [
+            0,
+            19
+        ],
+        "terms_url": "http://openstreetmap.org/",
+        "terms_text": "© OpenStreetMap contributors, CC-BY-SA. The tracing layer is in sync with openstreetmap.org.",
+        "id": "MAPNIK",
+        "default": true
+    }
+];
